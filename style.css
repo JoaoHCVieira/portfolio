@@ -1,51 +1,157 @@
+/* Importação de fonte moderna do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* Reset e Variáveis de Cores */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+:root {
+  --primary: #2563eb;       /* Azul moderno */
+  --primary-hover: #1d4ed8;
+  --bg-color: #0f172a;      /* Fundo escuro elegante (Dark Mode) */
+  --card-bg: #1e293b;       /* Fundo dos cartões */
+  --text-color: #f8fafc;     /* Texto principal */
+  --text-muted: #94a3b8;    /* Texto secundário */
+  --border-color: #334155;
+  --radius: 12px;
+}
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   line-height: 1.6;
+  padding: 40px 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
+/* Layout do Container */
 .container {
-  max-width: 800px;
-  margin: auto;
-  padding: 20px;
+  max-width: 700px;
+  margin: 0 auto;
+  width: 100%;
 }
 
+/* Cabeçalho */
 header {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--border-color);
 }
 
 h1 {
-  margin-bottom: 10px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+}
+
+header p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+header p:first-of-type {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* Seções e Cards */
+section {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 28px;
+  margin-bottom: 24px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+section:hover {
+  transform: translateY(-2px);
+  border-color: var(--primary);
 }
 
 h2 {
-  margin: 20px 0 10px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
+/* Detalhe estético antes de cada título h2 */
+h2::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 18px;
+  background-color: var(--primary);
+  border-radius: 2px;
+}
+
+section p {
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+/* Lista de Tecnologias em Chips/Tags */
 ul {
-  list-style: square;
-  margin-left: 20px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+li {
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* Links estilizados como Botões (Seção Contato) */
+section:last-of-type p {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
 }
 
 a {
-  color: #0066cc;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary);
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
   text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
 a:hover {
-  text-decoration: underline;
+  background-color: var(--primary-hover);
+  transform: translateY(-1px);
 }
 
+/* Rodapé */
 footer {
   text-align: center;
   margin-top: 40px;
-  font-size: 14px;
+  color: var(--text-muted);
+  font-size: 0.875rem;
 }
