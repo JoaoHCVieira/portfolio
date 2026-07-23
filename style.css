@@ -1,22 +1,30 @@
-/* Importação de fonte moderna do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
-/* Reset e Variáveis de Cores */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* 1. Modo Claro */
 :root {
-  --primary: #2563eb;       /* Azul moderno */
+  --primary: #2563eb;
   --primary-hover: #1d4ed8;
-  --bg-color: #0f172a;      /* Fundo escuro elegante (Dark Mode) */
-  --card-bg: #1e293b;       /* Fundo dos cartões */
-  --text-color: #f8fafc;     /* Texto principal */
-  --text-muted: #94a3b8;    /* Texto secundário */
-  --border-color: #334155;
+  --bg-color: #f8fafc;
+  --card-bg: #ffffff;
+  --text-color: #0f172a;
+  --text-muted: #475569;
+  --border-color: #e2e8f0;
   --radius: 12px;
+}
+
+/* 2. Modo Escuro */
+body.dark-mode {
+  --bg-color: #0f172a;
+  --card-bg: #1e293b;
+  --text-color: #f8fafc;
+  --text-muted: #94a3b8;
+  --border-color: #334155;
 }
 
 body {
@@ -29,27 +37,45 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Layout do Container */
 .container {
   max-width: 700px;
   margin: 0 auto;
   width: 100%;
 }
 
-/* Cabeçalho */
 header {
   text-align: center;
   margin-bottom: 40px;
   padding-bottom: 30px;
   border-bottom: 1px solid var(--border-color);
+  position: relative;
+}
+
+/* Estilo do Botão de Alternar Tema */
+#theme-toggle {
+  background: var(--card-bg);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin-bottom: 20px;
+  transition: all 0.2s ease;
+}
+
+#theme-toggle:hover {
+  border-color: var(--primary);
+  transform: translateY(-1px);
 }
 
 h1 {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #fff;
   margin-bottom: 8px;
   letter-spacing: -0.02em;
 }
@@ -64,14 +90,13 @@ header p:first-of-type {
   font-weight: 600;
 }
 
-/* Seções e Cards */
 section {
   background: var(--card-bg);
   border: 1px solid var(--border-color);
   border-radius: var(--radius);
   padding: 28px;
   margin-bottom: 24px;
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.3s ease;
 }
 
 section:hover {
@@ -83,13 +108,11 @@ h2 {
   font-size: 1.3rem;
   font-weight: 600;
   margin-bottom: 16px;
-  color: #fff;
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-/* Detalhe estético antes de cada título h2 */
 h2::before {
   content: '';
   display: inline-block;
@@ -104,7 +127,6 @@ section p {
   font-size: 1rem;
 }
 
-/* Lista de Tecnologias em Chips/Tags */
 ul {
   list-style: none;
   display: flex;
@@ -120,9 +142,9 @@ li {
   border-radius: 20px;
   font-size: 0.9rem;
   font-weight: 600;
+  transition: background-color 0.3s ease;
 }
 
-/* Links estilizados como Botões (Seção Contato) */
 section:last-of-type p {
   display: flex;
   gap: 12px;
@@ -148,7 +170,6 @@ a:hover {
   transform: translateY(-1px);
 }
 
-/* Rodapé */
 footer {
   text-align: center;
   margin-top: 40px;
