@@ -1,56 +1,213 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>João Henrique | Portfólio</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>João Henrique | Desenvolvedor Front-end</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/scripts.js" defer></script>
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-  <header class="container">
-    
-    <button id="theme-toggle" aria-label="Alternar Tema">🌙 Modo Escuro</button>
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#hero" class="logo">&lt;JoãoHenrique /&gt;</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Abrir menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                    <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
+                    <li><a href="#projetos" class="nav-link">Projetos</a></li>
+                    <li><a href="#experiencia" class="nav-link">Experiência</a></li>
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <h1>João Henrique</h1>
-    <p>Estudante de Engenharia de Software</p>
-    <p>Desenvolvedor Front-end em formação</p>
-  </header>
+    <main>
+        <section id="hero" class="hero">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="badge">Disponível para Estágio & Júnior</span>
+                    <h1>Olá, sou <span class="highlight">João Henrique</span></h1>
+                    <h2 class="subtitle">Desenvolvedor Front-end</h2>
+                    <p class="description">
+                        Estudante do 4º período de Engenharia de Software. Focado na criação de interfaces web modernas, responsivas e funcionais com HTML5, CSS3 e JavaScript.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projetos" class="btn btn-primary">Ver Projetos</a>
+                        <a href="#contato" class="btn btn-outline">Entrar em Contato</a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/JoaoHCVieira" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/jo%C3%A3o-henrique-2a2b74280/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:joaoh.cardosovieira@gmail.com" aria-label="E-mail"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <main class="container">
-    <section>
-      <h2>Sobre mim</h2>
-      <p>
-        Sou estudante de Engenharia de Software, com foco em desenvolvimento front-end.
-        Estou aprendendo HTML, CSS e JavaScript e busco uma oportunidade de estágio remoto
-        para evoluir profissionalmente na área de tecnologia.
-      </p>
-    </section>
+        <!-- SOBRE MIM -->
+        <section id="sobre" class="section">
+            <div class="container">
+                <h2 class="section-title">Sobre Mim</h2>
+                <div class="sobre-content">
+                    <p>
+                        Atualmente no 4º período de <strong>Engenharia de Software</strong> na Estácio, combino a base teórica da faculdade com a prática constante no desenvolvimento web. Tenho domínio da tríade fundamental (**HTML5, CSS3 e JavaScript ES6+**), construindo projetos focados em usabilidade e boas práticas.
+                    </p>
+                    <p>
+                        Possuo formação técnica, vivência em grandes ambientes operacionais (como a <strong>Vale S.A</strong> usando sistema SAP) e <strong>inglês avançado (CCAA)</strong>. Essa bagagem me deu forte raciocínio lógico, disciplina, excelente comunicação e rápida capacidade de aprendizado.
+                    </p>
+                </div>
+            </div>
+        </section>
 
-    <section>
-      <h2>Tecnologias</h2>
-      <ul>
-        <li>HTML5</li>
-        <li>CSS3</li>
-        <li>JavaScript</li>
-        <li>Git e GitHub</li>
-      </ul>
-    </section>
+        <!-- HABILIDADES TÉCNICAS -->
+        <section id="habilidades" class="section bg-alt">
+            <div class="container">
+                <h2 class="section-title">Habilidades Técnicas</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <i class="fab fa-html5 skill-icon"></i>
+                        <h3>Linguagens & Base</h3>
+                        <p>HTML5 Semântico, CSS3 Moderno, JavaScript (ES6+)</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-layer-group skill-icon"></i>
+                        <h3>Layout & Estilização</h3>
+                        <p>Flexbox, CSS Grid, Responsividade (Mobile First)</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-code-branch skill-icon"></i>
+                        <h3>Lógica & Versionamento</h3>
+                        <p>Manipulação de DOM, Consumo de APIs REST, Git & GitHub</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-globe skill-icon"></i>
+                        <h3>Idiomas & Ferramentas</h3>
+                        <p>Inglês Avançado/Fluente (CCAA), VS Code, SAP</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <section>
-      <h2>Contato</h2>
-      <p>
-        <a href="https://www.linkedin.com/in/jo%C3%A3o-henrique-2a2b74280/" target="_blank">LinkedIn</a>
-        <a href="https://github.com/JoaoHCVieira" target="_blank">GitHub</a>
-      </p>
-    </section>
-  </main>
+        <!-- PROJETOS -->
+        <section id="projetos" class="section">
+            <div class="container">
+                <h2 class="section-title">Projetos em Destaque</h2>
+                <div class="projects-grid">
+                    
+                    <!-- Card de Projeto 1 -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <div class="placeholder-img">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Portfólio Pessoal Web</h3>
+                            <p>
+                                Site pessoal construído para apresentar projetos, habilidades e trajetória profissional. Desenvolvido com HTML semântico, CSS moderno e interações em JavaScript puro.
+                            </p>
+                            <div class="tech-tags">
+                                <span class="tag">HTML5</span>
+                                <span class="tag">CSS3</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">Git</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/JoaoHCVieira" target="_blank" class="btn-link"><i class="fab fa-github"></i> Código</a>
+                                <a href="#hero" class="btn-link"><i class="fas fa-external-link-alt"></i> Demo ao vivo</a>
+                            </div>
+                        </div>
+                    </article>
 
-  <footer class="container">
-    <p>© 2026 João Henrique</p>
-  </footer>
+                    <!-- Card de Projeto 2 -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <div class="placeholder-img">
+                                <i class="fas fa-calculator"></i>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Projeto em Desenvolvimento</h3>
+                            <p>
+                                Espaço reservado para adicionar futuros projetos.
+                            </p>
+                            <div class="tech-tags">
+                                <span class="tag">HTML5</span>
+                                <span class="tag">CSS3</span>
+                                <span class="tag">JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/JoaoHCVieira" target="_blank" class="btn-link"><i class="fab fa-github"></i> Código</a>
+                            </div>
+                        </div>
+                    </article>
 
+                </div>
+            </div>
+        </section>
 
-  <script src="script.js"></script>
+        <!-- EXPERIÊNCIA & FORMAÇÃO -->
+        <section id="experiencia" class="section bg-alt">
+            <div class="container">
+                <h2 class="section-title">Trajetória & Formação</h2>
+                <div class="timeline">
+                    
+                    <div class="timeline-item">
+                        <span class="timeline-date">Em andamento</span>
+                        <h3>Engenharia de Software (4º Período)</h3>
+                        <p class="timeline-company">Universidade Estácio de Sá</p>
+                        <p>Desenvolvimento da base acadêmica em lógica, orientação a objetos, arquitetura e engenharia de software.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="timeline-date">Experiência Profissional</span>
+                        <h3>Jovem Aprendiz - Mecânica de Manutenção</h3>
+                        <p class="timeline-company">Vale S.A</p>
+                        <p>Uso diário do sistema corporativo SAP, interface com engenheiros e rotinas sob processos rigorosos.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="timeline-date">Formação Concluída</span>
+                        <h3>Inglês Avançado / Fluente</h3>
+                        <p class="timeline-company">CCAA</p>
+                        <p>Domínio do idioma para leitura de documentação técnica, comunicação e utilização diária.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTATO -->
+        <section id="contato" class="section">
+            <div class="container text-center">
+                <h2 class="section-title">Vamos Conversar?</h2>
+                <p class="contact-subtitle">
+                    Estou buscando oportunidades de <strong>estágio ou nível júnior</strong> em desenvolvimento Front-end.
+                </p>
+                <div class="contact-actions">
+                    <a href="mailto:joaoh.cardosovieira@gmail.com" class="btn btn-primary btn-large">
+                        <i class="fas fa-envelope"></i> Enviar E-mail
+                    </a>
+                    <a href="https://www.linkedin.com/in/jo%C3%A3o-henrique-2a2b74280/" target="_blank" class="btn btn-outline btn-large">
+                        <i class="fab fa-linkedin"></i> Conectar no LinkedIn
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; João Henrique Cardoso Vieira. Desenvolvido com HTML, CSS e JavaScript.</p>
+        </div>
+    </footer>
 </body>
 </html>
